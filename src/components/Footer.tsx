@@ -1,14 +1,15 @@
 import React from 'react';
-import { Github, Linkedin, Twitter } from 'lucide-react';
+import {Facebook, Github, Instagram, Linkedin, Twitter} from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 export const Footer: React.FC = () => {
   const { language } = useLanguage();
 
   const socialLinks = [
-    { icon: Github, href: '#' },
-    { icon: Linkedin, href: '#' },
-    { icon: Twitter, href: '#' },
+    { icon: Github, href: 'https://github.com/kerfaiyass54' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/yassine-kerfai-14109b223/' },
+    { icon: Facebook, href: 'https://www.facebook.com/kerfai.yassine' },
+      { icon: Instagram, href: 'https://www.instagram.com/yassine.kerfai02/' },
   ];
 
   return (

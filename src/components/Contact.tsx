@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { useInView } from 'react-intersection-observer';
-import { Mail, MapPin, Phone, Send } from 'lucide-react';
+import {FacebookIcon, Linkedin, Mail, MapPin, Phone, Send} from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 export const Contact: React.FC = () => {
@@ -16,9 +16,9 @@ export const Contact: React.FC = () => {
   };
 
   const contactInfo = [
-    { icon: Mail, text: 'hello@example.com' },
-    { icon: Phone, text: '+1 (555) 123-4567' },
-    { icon: MapPin, text: 'San Francisco, CA' },
+    { icon: Mail, text: 'kerfaiyassine1474@gmail.com' },
+    { icon: Phone, text: '+216 27 690 831' },
+    { icon: MapPin, text: 'Tunis, Tunisia' },
   ];
 
   return (
@@ -73,57 +73,6 @@ export const Contact: React.FC = () => {
               </div>
             </div>
           </motion.div>
-
-          <motion.form
-            initial={{ opacity: 0, x: 50 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            onSubmit={handleSubmit}
-            className="space-y-6"
-          >
-            <div>
-              <input
-                type="text"
-                placeholder={t.contact.name}
-                value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                required
-                className="w-full px-4 py-3 bg-white dark:bg-gray-800 text-gray-800 dark:text-white rounded-lg border border-gray-300 dark:border-gray-700 focus:border-blue-500 focus:outline-none transition-colors"
-              />
-            </div>
-
-            <div>
-              <input
-                type="email"
-                placeholder={t.contact.email}
-                value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                required
-                className="w-full px-4 py-3 bg-white dark:bg-gray-800 text-gray-800 dark:text-white rounded-lg border border-gray-300 dark:border-gray-700 focus:border-blue-500 focus:outline-none transition-colors"
-              />
-            </div>
-
-            <div>
-              <textarea
-                placeholder={t.contact.message}
-                value={formData.message}
-                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                required
-                rows={5}
-                className="w-full px-4 py-3 bg-white dark:bg-gray-800 text-gray-800 dark:text-white rounded-lg border border-gray-300 dark:border-gray-700 focus:border-blue-500 focus:outline-none transition-colors resize-none"
-              />
-            </div>
-
-            <motion.button
-              type="submit"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 flex items-center justify-center gap-2"
-            >
-              {t.contact.send}
-              <Send className="w-5 h-5" />
-            </motion.button>
-          </motion.form>
         </div>
       </div>
     </section>
