@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { useInView } from 'react-intersection-observer';
 import { Award, Briefcase } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import personalPic from './yassine.png';
 
 export const About: React.FC = () => {
   const { t, language } = useLanguage();
@@ -43,7 +44,7 @@ export const About: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-600 rounded-2xl blur-2xl opacity-30 animate-pulse"></div>
               <div className="relative w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl overflow-hidden">
                 <div className="absolute inset-0 flex items-center justify-center text-white text-6xl">
-
+                    <img src={personalPic} alt="Car" />
                 </div>
               </div>
             </div>
