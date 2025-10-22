@@ -8,13 +8,13 @@ export const Skills: React.FC = () => {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   const skills = [
-    { name: 'React', level: 90, color: 'from-cyan-500 to-blue-500' },
-    { name: 'TypeScript', level: 85, color: 'from-blue-600 to-blue-700' },
-    { name: 'Node.js', level: 80, color: 'from-green-500 to-green-600' },
+    { name: 'Angular', level: 75, color: 'from-cyan-500 to-blue-500' },
+    { name: 'Spring Boot', level: 80, color: 'from-blue-600 to-blue-700' },
+    { name: 'SQL', level: 90, color: 'from-green-500 to-green-600' },
     { name: 'Tailwind CSS', level: 95, color: 'from-sky-400 to-cyan-500' },
-    { name: 'Next.js', level: 85, color: 'from-gray-700 to-gray-900' },
+    { name: 'Python', level: 80, color: 'from-gray-700 to-gray-900' },
     { name: 'MongoDB', level: 75, color: 'from-green-600 to-green-700' },
-    { name: 'GraphQL', level: 70, color: 'from-pink-500 to-purple-500' },
+    { name: 'Git', level: 75, color: 'from-pink-500 to-purple-500' },
     { name: 'Docker', level: 65, color: 'from-blue-500 to-blue-600' },
   ];
 
