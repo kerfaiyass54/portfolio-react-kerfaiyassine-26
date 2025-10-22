@@ -10,16 +10,16 @@ export const Projects: React.FC = () => {
 
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution with React, Node.js, and MongoDB',
+      title: 'Personal blog',
+      description: 'A frontend blog project aiming to write articles.',
       gradient: 'from-blue-500 to-cyan-500',
-      tags: ['React', 'Node.js', 'MongoDB'],
+      tags: ['Angular', 'Bootstrap'],
     },
     {
-      title: 'Task Management App',
-      description: 'Collaborative task management tool with real-time updates',
+      title: 'Vehicule rent application App',
+      description: 'Collaborative vehicule rentals management application',
       gradient: 'from-purple-500 to-pink-500',
-      tags: ['Next.js', 'TypeScript', 'Firebase'],
+      tags: ['Angular', 'Spring Boot', 'Keycloak', 'PostgreSQL'],
     },
     {
       title: 'Portfolio Builder',
@@ -28,10 +28,10 @@ export const Projects: React.FC = () => {
       tags: ['React', 'Tailwind', 'Supabase'],
     },
     {
-      title: 'Social Media Dashboard',
-      description: 'Analytics dashboard for social media management',
+      title: 'Football management app',
+      description: 'Full-stack microservices app for football tournaments.',
       gradient: 'from-green-500 to-teal-500',
-      tags: ['React', 'Chart.js', 'GraphQL'],
+      tags: ['Angular', 'Spring Boot', 'MongoDB','PostgreSQL','Kafka','Keycloak'],
     },
   ];
 
