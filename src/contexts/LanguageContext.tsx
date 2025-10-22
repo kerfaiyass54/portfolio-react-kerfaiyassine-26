@@ -104,7 +104,7 @@ const translations: Record<Language, Translations> = {
       experience: 'سنوات الخبرة',
       experienceValue: '+1',
       projects: 'المشاريع',
-      projectsValue: '+50',
+      projectsValue: '+15',
     },
     skills: {
       title: 'مهاراتي',
@@ -183,7 +183,7 @@ const translations: Record<Language, Translations> = {
       description: 'Je suis un développeur passionné qui aime créer des solutions innovantes utilisant différentes technologies. Fort de mon expertise dans les technologies web modernes, je donne vie à mes idées grâce à un code clair et un design élégant. J\'ai soif d\'apprendre pour intégrer de nouvelles idées.',
       experience: 'Années d\'expérience',
       experienceValue: '+1',
-      projects: 'Projets terminés',
+      projects: 'Projets',
       projectsValue: '+15',
     },
     skills: {
@@ -214,4 +214,26 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) =>
+export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [language, setLanguage] = useState<Language>('en');
+
+  return (
+    <LanguageContext.Provider
+      value={{
+        language,
+        setLanguage,
+        t: translations[language],
+      }}
+    >
+      {children}
+    </LanguageContext.Provider>
+  );
+};
+
+export const useLanguage = () => {
+  const context = useContext(LanguageContext);
+  if (!context) {
+    throw new Error('useLanguage must be used within LanguageProvider');
+  }
+  return context;
+};

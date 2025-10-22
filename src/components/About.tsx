@@ -42,7 +42,9 @@ export const About: React.FC = () => {
             <div className="relative w-full aspect-square max-w-md mx-auto">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-600 rounded-2xl blur-2xl opacity-30 animate-pulse"></div>
               <div className="relative w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center text-white text-6xl">👨‍💻</div>
+                <div className="absolute inset-0 flex items-center justify-center text-white text-6xl">
+
+                </div>
               </div>
             </div>
           </motion.div>
