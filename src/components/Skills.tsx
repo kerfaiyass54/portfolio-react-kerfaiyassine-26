@@ -16,6 +16,10 @@ export const Skills: React.FC = () => {
     { name: 'MongoDB', level: 75, color: 'from-green-600 to-green-700' },
     { name: 'Git', level: 75, color: 'from-pink-500 to-purple-500' },
     { name: 'Docker', level: 65, color: 'from-blue-500 to-blue-600' },
+    { name: 'PostgreSQL', level: 80, color: 'from-blue-500 to-indigo-500' },
+      { name: 'Java', level: 80, color: 'from-blue-500 to-indigo-500' },
+      { name: 'HTML/CSS', level: 80, color: 'from-pink-500 to-orange-500' },
+      { name: 'Javascript', level: 80, color: 'from-amber-400 to-red-500' },
   ];
 
   return (
