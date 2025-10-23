@@ -7,14 +7,6 @@ import { useLanguage } from '../contexts/LanguageContext';
 export const Contact: React.FC = () => {
   const { t, language } = useLanguage();
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    alert('Form submitted! (This is a demo)');
-    setFormData({ name: '', email: '', message: '' });
-  };
-
   const contactInfo = [
     { icon: Mail, text: 'kerfaiyassine1474@gmail.com' },
     { icon: Phone, text: '+216 27 690 831' },
