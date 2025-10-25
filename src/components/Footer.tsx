@@ -14,6 +14,7 @@ export const Footer: React.FC = () => {
 
   return (
     <footer
+        id="websites"
       className="py-8 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800"
       dir={language === 'ar' ? 'rtl' : 'ltr'}
     >

@@ -34,11 +34,12 @@ export const Navigation: React.FC = () => {
   };
 
   const navItems = [
+      { label: t.nav.home, id: 'home' },
     { label: t.nav.about, id: 'about' },
     { label: t.nav.skills, id: 'skills' },
     { label: t.nav.projects, id: 'projects' },
     { label: t.nav.contact, id: 'contact' },
-
+      { label: t.nav.websites, id: 'websites' },
   ];
 
   return (
@@ -48,20 +49,9 @@ export const Navigation: React.FC = () => {
       }`}
       dir={language === 'ar' ? 'rtl' : 'ltr'}
     >
-        <button
-            onClick={() => setDarkMode(!darkMode)}
-            style={{
-                background: "none",
-                border: "1px solid gray",
-                borderRadius: "8px",
-                padding: "0.4rem 0.8rem",
-                cursor: "pointer",
-                color: darkMode ? "white" : "black",
-            }}
-        >
-            {darkMode ? "☀️ Light" : "🌙 Dark"}
-        </button>
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+
         <div className="flex items-center justify-between h-16 sm:h-20">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -86,6 +76,19 @@ export const Navigation: React.FC = () => {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></span>
               </motion.button>
             ))}
+              <button
+                  onClick={() => setDarkMode(!darkMode)}
+                  style={{
+                      background: "none",
+                      border: "1px solid gray",
+                      borderRadius: "8px",
+                      padding: "0.4rem 0.8rem",
+                      cursor: "pointer",
+                      color: darkMode ? "white" : "black",
+                  }}
+              >
+                  {darkMode ? "☀️ Light" : "🌙 Dark"}
+              </button>
             <LanguageSwitcher />
           </div>
 
