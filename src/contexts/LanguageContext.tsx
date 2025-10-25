@@ -106,7 +106,7 @@ const translations: Record<Language, Translations> = {
     },
     hero: {
       greeting: 'مرحباً، أنا',
-      name: 'جون دو',
+      name: 'ياسين كرفاعي',
       title: 'مهندس في تطوير البرمجيات',
       description: 'أستطيع تصميم مواقع وتطبيقات ويب رائعة. أتوق لمعرفة المزيد في مجالات متعددة.',
       cta: 'تواصل معي',
