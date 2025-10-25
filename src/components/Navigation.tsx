@@ -38,6 +38,7 @@ export const Navigation: React.FC = () => {
     { label: t.nav.skills, id: 'skills' },
     { label: t.nav.projects, id: 'projects' },
     { label: t.nav.contact, id: 'contact' },
+
   ];
 
   return (

@@ -8,6 +8,8 @@ interface Translations {
     skills: string;
     projects: string;
     contact: string;
+    home: string;
+    websites: string;
   };
   hero: {
     greeting: string;
@@ -50,6 +52,8 @@ const translations: Record<Language, Translations> = {
       skills: 'Skills',
       projects: 'Projects',
       contact: 'Contact',
+        home: 'Home',
+        websites: 'Websites'
     },
     hero: {
       greeting: 'Hello, I\'m',
@@ -90,6 +94,8 @@ const translations: Record<Language, Translations> = {
       skills: 'المهارات',
       projects: 'المشاريع',
       contact: 'اتصل',
+        home: 'الترحيب',
+        websites: 'المواقع'
     },
     hero: {
       greeting: 'مرحباً، أنا',
@@ -130,6 +136,8 @@ const translations: Record<Language, Translations> = {
       skills: 'Fähigkeiten',
       projects: 'Projekte',
       contact: 'Kontakt',
+        home: 'Startseite',
+        websites: 'Websites'
     },
     hero: {
       greeting: 'Hallo, ich bin',
@@ -170,6 +178,8 @@ const translations: Record<Language, Translations> = {
       skills: 'Compétences',
       projects: 'Projets',
       contact: 'Contact',
+        home: 'Page d\'accueil',
+        websites: 'Sites web'
     },
     hero: {
       greeting: 'Bonjour, je suis',
