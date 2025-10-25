@@ -36,6 +36,7 @@ export const Navigation: React.FC = () => {
   const navItems = [
       { label: t.nav.home, id: 'home' },
     { label: t.nav.about, id: 'about' },
+      {label: t.nav.languages, id: 'languages'}  ,
     { label: t.nav.skills, id: 'skills' },
     { label: t.nav.projects, id: 'projects' },
     { label: t.nav.contact, id: 'contact' },

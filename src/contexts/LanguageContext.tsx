@@ -10,6 +10,7 @@ interface Translations {
     contact: string;
     home: string;
     websites: string;
+    languages: string;
   };
   hero: {
     greeting: string;
@@ -56,7 +57,8 @@ const translations: Record<Language, Translations> = {
       projects: 'Projects',
       contact: 'Contact',
         home: 'Home',
-        websites: 'Websites'
+        websites: 'Websites',
+        languages: 'Languages'
     },
     hero: {
       greeting: 'Hello, I\'m',
@@ -102,7 +104,8 @@ const translations: Record<Language, Translations> = {
       projects: 'المشاريع',
       contact: 'اتصل',
         home: 'الترحيب',
-        websites: 'المواقع'
+        websites: 'المواقع',
+        languages: 'اللغات'
     },
     hero: {
       greeting: 'مرحباً، أنا',
@@ -147,7 +150,8 @@ const translations: Record<Language, Translations> = {
       projects: 'Projekte',
       contact: 'Kontakt',
         home: 'Startseite',
-        websites: 'Websites'
+        websites: 'Websites',
+        languages: 'Sprachen'
     },
     hero: {
       greeting: 'Hallo, ich bin',
@@ -192,7 +196,8 @@ const translations: Record<Language, Translations> = {
       projects: 'Projets',
       contact: 'Contact',
         home: 'Page d\'accueil',
-        websites: 'Sites web'
+        websites: 'Sites web',
+        languages: 'Langues'
     },
     hero: {
       greeting: 'Bonjour, je suis',
