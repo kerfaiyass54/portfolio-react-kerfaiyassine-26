@@ -17,6 +17,9 @@ interface Translations {
     title: string;
     description: string;
     cta: string;
+    introduce: string;
+    skills: string;
+    project: string;
   };
   about: {
     title: string;
@@ -61,6 +64,10 @@ const translations: Record<Language, Translations> = {
       title: 'Software engineer',
       description: 'I can craft beautiful websites and web applications. Thirst to learn more about many fields.',
       cta: 'Get in Touch',
+        introduce: 'See my information',
+        skills: 'Check my skills',
+        project: 'Witness my work'
+
     },
     about: {
       title: 'About Me',
@@ -103,6 +110,9 @@ const translations: Record<Language, Translations> = {
       title: 'مهندس في تطوير البرمجيات',
       description: 'أستطيع تصميم مواقع وتطبيقات ويب رائعة. أتوق لمعرفة المزيد في مجالات متعددة.',
       cta: 'تواصل معي',
+        introduce: 'تعرف علي',
+        skills: 'شاهد قدراتي',
+        project: 'اطلع على أعمالي'
     },
     about: {
       title: 'نبذة عني',
@@ -145,6 +155,9 @@ const translations: Record<Language, Translations> = {
       title: 'Software-Ingenieur',
       description: 'Je peux créer de magnifiques sites web et applications web. J\'ai soif d\'apprendre dans de nombreux domaines.',
       cta: 'Kontaktieren',
+        introduce: 'Ich vorstelle mir',
+        skills: 'Lernen Sie meine Erkentnisse kennen',
+        project: 'Sehen Sie meine Werke'
     },
     about: {
       title: 'Über mich',
@@ -187,6 +200,9 @@ const translations: Record<Language, Translations> = {
       title: 'Ingénieur en génie logicielle',
       description: 'Je crée des expériences web belles et fonctionnelles',
       cta: 'Me contacter',
+        introduce: 'Connaissez-moi',
+        skills: 'Voyez toutes mes compétences',
+        project: 'Regardez tous mes projets'
     },
     about: {
       title: 'À propos de moi',
