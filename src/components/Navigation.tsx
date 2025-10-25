@@ -7,6 +7,7 @@ import { LanguageSwitcher } from './LanguageSwitcher';
 export const Navigation: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
   const { t, language } = useLanguage();
 
   useEffect(() => {
@@ -16,6 +17,15 @@ export const Navigation: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+        if (darkMode) {
+            document.body.classList.add("dark");
+        } else {
+            document.body.classList.remove("dark");
+        }}, [darkMode]);
+
+
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -37,6 +47,19 @@ export const Navigation: React.FC = () => {
       }`}
       dir={language === 'ar' ? 'rtl' : 'ltr'}
     >
+        <button
+            onClick={() => setDarkMode(!darkMode)}
+            style={{
+                background: "none",
+                border: "1px solid gray",
+                borderRadius: "8px",
+                padding: "0.4rem 0.8rem",
+                cursor: "pointer",
+                color: darkMode ? "white" : "black",
+            }}
+        >
+            {darkMode ? "☀️ Light" : "🌙 Dark"}
+        </button>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           <motion.div

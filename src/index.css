@@ -2095,3 +2095,9 @@ html {
     opacity: .5;
   }
 }
+
+body.dark {
+    background-color: #121212;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+}
