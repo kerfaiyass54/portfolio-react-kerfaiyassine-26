@@ -34,13 +34,11 @@ export const Navigation: React.FC = () => {
   };
 
   const navItems = [
-      { label: t.nav.home, id: 'home' },
     { label: t.nav.about, id: 'about' },
       {label: t.nav.languages, id: 'languages'}  ,
     { label: t.nav.skills, id: 'skills' },
     { label: t.nav.projects, id: 'projects' },
     { label: t.nav.contact, id: 'contact' },
-      { label: t.nav.websites, id: 'websites' },
   ];
 
   return (
@@ -54,13 +52,13 @@ export const Navigation: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="flex items-center justify-between h-16 sm:h-20">
-          <motion.div
+          <motion.button
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             className="text-xl sm:text-2xl bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
           >
             Portfolio
-          </motion.div>
+          </motion.button>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
