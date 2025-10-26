@@ -26,7 +26,18 @@ export const Languages: React.FC = ()=>{
             className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-blue-900/20"
             dir={language === 'ar' ? 'rtl' : 'ltr'}
         >
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6 }}
+                className="text-center mb-12"
+            >
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
+                    My spoken languages
+                </h2>
+            </motion.div>
             <div className="absolute inset-0 overflow-hidden">
+
                 <motion.div
                     animate={{
                         scale: [1, 1.2, 1],
@@ -57,6 +68,7 @@ export const Languages: React.FC = ()=>{
                 animate={inView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.4 }}
             >
+
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="text-center">
                     <motion.h1
