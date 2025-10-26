@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { useInView } from 'react-intersection-observer';
-import { Award, Briefcase } from 'lucide-react';
+import { Award, Briefcase, Cpu, Server, Code, FileText } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import personalPic from './yassine.png';
 
@@ -13,6 +13,13 @@ export const About: React.FC = () => {
     { icon: Briefcase, label: t.about.experience, value: t.about.experienceValue },
     { icon: Award, label: t.about.projects, value: t.about.projectsValue },
   ];
+
+  const education = [
+      { icon: Server, label: "2024", value: "Graduation" },
+      { icon: Code, label: "CS engineering 2021-2024", value: "National school of engineering of Tunis" },
+      { icon: Cpu, label: "Scientific preparatory 2019-2021", value: "Preparatory Institute of EL Manar" },
+      { icon: FileText, label: "Baccalaureate 2019", value: "Aouina High school" }
+  ]
 
   return (
     <section
@@ -34,23 +41,26 @@ export const About: React.FC = () => {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative"
-          >
-            <div className="relative w-full aspect-square max-w-md mx-auto">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-600 rounded-2xl blur-2xl opacity-30 animate-pulse"></div>
-              <div className="relative w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center text-white text-6xl">
-                    <img src={personalPic} alt="Car" />
+            <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                animate={inView ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="relative"
+            >
+                <div className="relative w-full max-w-md mx-auto">
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-600 rounded-full blur-2xl opacity-30 animate-pulse"></div>
+                    <div className="relative w-48 h-48+ mx-auto rounded-full overflow-hidden">
+                        <img
+                            src={personalPic}
+                            alt="Profile"
+                            className="w-full h-full object-cover rounded-full"
+                        />
+                    </div>
                 </div>
-              </div>
-            </div>
-          </motion.div>
+            </motion.div>
 
-          <motion.div
+
+            <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -77,8 +87,26 @@ export const About: React.FC = () => {
               ))}
             </div>
           </motion.div>
+
+                {education.map((stat, index) => (
+                    <motion.div
+                        key={index}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={inView ? { opacity: 1, y: 0 } : {}}
+                        transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
+                        className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20
+           p-6 rounded-xl border border-emerald-100 dark:border-emerald-800/30"                    >
+                        <stat.icon className="w-8 h-8 text-blue-600 dark:text-blue-400 mb-3" />
+                        <div className="text-2xl sm:text-3xl bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
+                            {stat.value}
+                        </div>
+                        <div className="text-gray-600 dark:text-gray-400 text-sm">{stat.label}</div>
+                    </motion.div>
+                ))}
+
+            </div>
         </div>
-      </div>
+
     </section>
   );
 };

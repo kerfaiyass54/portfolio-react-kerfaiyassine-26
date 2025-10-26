@@ -52,6 +52,11 @@ export const Languages: React.FC = ()=>{
                     className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-400/10 rounded-full blur-3xl"
                 />
             </div>
+            <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                animate={inView ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.6, delay: 0.4 }}
+            >
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="text-center">
                     <motion.h1
@@ -94,6 +99,7 @@ export const Languages: React.FC = ()=>{
 
 
             </div>
+            </motion.div>
 
         </section>
     );
