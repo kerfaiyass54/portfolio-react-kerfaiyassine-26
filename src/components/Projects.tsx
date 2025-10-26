@@ -14,24 +14,33 @@ export const Projects: React.FC = () => {
       description: 'A frontend blog project aiming to write articles.',
       gradient: 'from-blue-500 to-cyan-500',
       tags: ['Angular', 'Bootstrap'],
+      link: 'https://github.com/kerfaiyass54/blog-project',
+        linkFront: ''
     },
     {
       title: 'Vehicule rent application App',
       description: 'Collaborative vehicule rentals management application',
       gradient: 'from-purple-500 to-pink-500',
       tags: ['Angular', 'Spring Boot', 'Keycloak', 'PostgreSQL'],
+        link: 'https://github.com/kerfaiyass54/vehicule_rent_app',
+        linkFront: 'https://github.com/kerfaiyass54/vehicule-rent-frontend'
     },
     {
       title: 'Portfolio Builder',
       description: 'Drag-and-drop portfolio builder for creatives',
       gradient: 'from-orange-500 to-red-500',
-      tags: ['React', 'Tailwind', 'Supabase'],
+      tags: ['React', 'Tailwind', 'Docker'],
+        link: 'https://github.com/kerfaiyass54/portfolio-react-kerfaiyassine-26',
+        linkFront: ''
+
     },
     {
       title: 'Football management app',
       description: 'Full-stack microservices app for football tournaments.',
       gradient: 'from-green-500 to-teal-500',
       tags: ['Angular', 'Spring Boot', 'MongoDB','PostgreSQL','Kafka','Keycloak'],
+        link: 'https://github.com/kerfaiyass54/football-app-back',
+        linkFront: 'https://github.com/kerfaiyass54/football-app-frontend'
     },
   ];
 
@@ -68,12 +77,31 @@ export const Projects: React.FC = () => {
               <div className={`h-48 bg-gradient-to-br ${project.gradient} relative overflow-hidden`}>
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <button className="mx-2 p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-colors">
-                    
-                  </button>
-                  <button className="mx-2 p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-colors">
-                    <Github className="w-5 h-5 text-white" />
-                  </button>
+                    {project.linkFront ? (
+                        <a
+                            href={project.linkFront}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="mx-2 p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-colors"
+                        >
+                            <span className="text-white">🔗</span>
+                        </a>
+                    ) : (
+                        <button
+                            disabled
+                            className="mx-2 p-3 bg-white/10 backdrop-blur-sm rounded-full text-gray-400 cursor-not-allowed"
+                        >
+                            <span>🔗</span>
+                        </button>
+                    )}
+                    <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mx-2 p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-colors"
+                    >
+                        <Github className="w-5 h-5 text-white" />
+                    </a>
                 </div>
               </div>
 
