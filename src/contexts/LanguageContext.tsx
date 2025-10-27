@@ -11,6 +11,8 @@ interface Translations {
     home: string;
     websites: string;
     languages: string;
+    dark: string;
+    light: string;
   };
   hero: {
     greeting: string;
@@ -21,6 +23,8 @@ interface Translations {
     introduce: string;
     skills: string;
     project: string;
+    look: string;
+    row: string;
   };
   about: {
     title: string;
@@ -58,7 +62,9 @@ const translations: Record<Language, Translations> = {
       contact: 'Contact',
         home: 'Home',
         websites: 'Websites',
-        languages: 'Languages'
+        languages: 'Languages',
+        dark: 'Dark',
+        light: 'Light'
     },
     hero: {
       greeting: 'Hello, I\'m',
@@ -68,7 +74,9 @@ const translations: Record<Language, Translations> = {
       cta: 'Get in Touch',
         introduce: 'See my information',
         skills: 'Check my skills',
-        project: 'Witness my work'
+        project: 'Witness my work',
+        look: 'Let\'s take a look to my portfolio',
+        row: 'Click on that row below or use the navigation'
 
     },
     about: {
@@ -105,7 +113,9 @@ const translations: Record<Language, Translations> = {
       contact: 'اتصل',
         home: 'الترحيب',
         websites: 'المواقع',
-        languages: 'اللغات'
+        languages: 'اللغات',
+        dark: 'ظلام',
+        light: 'شاسع'
     },
     hero: {
       greeting: 'مرحباً، أنا',
@@ -115,7 +125,9 @@ const translations: Record<Language, Translations> = {
       cta: 'تواصل معي',
         introduce: 'تعرف علي',
         skills: 'شاهد قدراتي',
-        project: 'اطلع على أعمالي'
+        project: 'اطلع على أعمالي',
+        look: '"لنلقِ نظرة على محفظتي',
+        row: 'انقر على الصف أدناه أو استخدم شريط التنقل'
     },
     about: {
       title: 'نبذة عني',
@@ -151,17 +163,21 @@ const translations: Record<Language, Translations> = {
       contact: 'Kontakt',
         home: 'Startseite',
         websites: 'Websites',
-        languages: 'Sprachen'
+        languages: 'Sprachen',
+        dark: 'Dunkel',
+        light: 'Hell'
     },
     hero: {
       greeting: 'Hallo, ich bin',
       name: 'Yassine KERFAI',
       title: 'Software-Ingenieur',
-      description: 'Je peux créer de magnifiques sites web et applications web. J\'ai soif d\'apprendre dans de nombreux domaines.',
+      description: 'Ich kann kreative Web-Anwendungen entwickeln. Ich wolle immer neue Dinge lernen.',
       cta: 'Kontaktieren',
         introduce: 'Ich vorstelle mir',
         skills: 'Lernen Sie meine Erkentnisse kennen',
-        project: 'Sehen Sie meine Werke'
+        project: 'Sehen Sie meine Werke',
+        look: 'Werfen wir einen Blick auf mein Portfolio',
+        row: 'Klicken Sie auf die Zeile unten oder verwenden Sie die Navigation'
     },
     about: {
       title: 'Über mich',
@@ -197,7 +213,9 @@ const translations: Record<Language, Translations> = {
       contact: 'Contact',
         home: 'Page d\'accueil',
         websites: 'Sites web',
-        languages: 'Langues'
+        languages: 'Langues',
+        dark: 'Sombre',
+        light: 'Clair'
     },
     hero: {
       greeting: 'Bonjour, je suis',
@@ -207,7 +225,9 @@ const translations: Record<Language, Translations> = {
       cta: 'Me contacter',
         introduce: 'Connaissez-moi',
         skills: 'Voyez toutes mes compétences',
-        project: 'Regardez tous mes projets'
+        project: 'Regardez tous mes projets',
+        look: 'Jetons un œil à mon portfolio',
+        row: 'Cliquez sur la ligne ci-dessous ou utilisez la navigation'
     },
     about: {
       title: 'À propos de moi',
