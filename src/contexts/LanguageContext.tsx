@@ -33,6 +33,13 @@ interface Translations {
     experienceValue: string;
     projects: string;
     projectsValue: string;
+    graduation: string;
+    enit:string;
+    ipeiem:string;
+    highschool:string;
+    engineering: string;
+    prepa: string;
+    bac: string;
   };
   skills: {
     title: string;
@@ -86,6 +93,13 @@ const translations: Record<Language, Translations> = {
       experienceValue: '+1',
       projects: 'Projects',
       projectsValue: '+15',
+        graduation: 'Graduation',
+        enit:'National school of engineering of Tunis',
+        ipeiem:'Preparatory Institute of EL Manar',
+        highschool:'Aouina High school',
+        engineering: 'CS engineering 2021-2024',
+        prepa: 'Scientific preparatory 2019-2021',
+        bac: 'Baccalaureate 2019',
     },
     skills: {
       title: 'My Skills',
@@ -136,6 +150,13 @@ const translations: Record<Language, Translations> = {
       experienceValue: '+1',
       projects: 'المشاريع',
       projectsValue: '+15',
+        graduation: 'التخرج',
+        enit:'المدرسة الوطنية للمهمدسين بتونس',
+        ipeiem:'المعهد التحضيري للدراسات الهندسية بالمنار',
+        highschool:'معهد العوينة',
+        engineering: 'هندسة اعلامية 2021-2024',
+        prepa: 'مرحلة تحضيرية علمية 2019-2021',
+        bac: 'باكالوريا 2019',
     },
     skills: {
       title: 'مهاراتي',
@@ -186,6 +207,13 @@ const translations: Record<Language, Translations> = {
       experienceValue: '+1',
       projects: 'Projekte',
       projectsValue: '+15',
+        graduation: 'Abschluss',
+        enit:'Nationale Ingenieurschule von Tunis',
+        ipeiem:'Vorbereitungsinstitut von EL Manar',
+        highschool:'Aouina Gymnasium',
+        engineering: 'Informatikingenieur 2021-2024',
+        prepa: 'Wissenchaftliche Vorbereitung 2019-2021',
+        bac: 'Abitur 2019',
     },
     skills: {
       title: 'Meine Fähigkeiten',
@@ -236,6 +264,13 @@ const translations: Record<Language, Translations> = {
       experienceValue: '+1',
       projects: 'Projets',
       projectsValue: '+15',
+        graduation: 'Graduation',
+        enit:'Ecole Nationale d\'ingénieur de Tunis',
+        ipeiem:'Institut préparatoire aux études d\'ingénieurs El Manar',
+        highschool:'Lycée Aouina',
+        engineering: 'Ingénieur informatique 2021-2024',
+        prepa: 'Cycle préparatoire scientifique 2019-2021',
+        bac: 'Baccalauréat 2019',
     },
     skills: {
       title: 'Mes compétences',
