@@ -15,10 +15,10 @@ export const About: React.FC = () => {
   ];
 
   const education = [
-      { icon: Server, label: "2024", value: "Graduation" },
-      { icon: Code, label: "CS engineering 2021-2024", value: "National school of engineering of Tunis" },
-      { icon: Cpu, label: "Scientific preparatory 2019-2021", value: "Preparatory Institute of EL Manar" },
-      { icon: FileText, label: "Baccalaureate 2019", value: "Aouina High school" }
+      { icon: Server, label: "2024", value: t.about.graduation },
+      { icon: Code, label: t.about.engineering, value: t.about.enit },
+      { icon: Cpu, label: t.about.prepa, value: t.about.ipeiem },
+      { icon: FileText, label: t.about.bac, value: t.about.highschool }
   ]
 
   return (
