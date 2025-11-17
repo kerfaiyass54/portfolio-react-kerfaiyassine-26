@@ -3,6 +3,10 @@
       "version": "0.1.0",
       "private": true,
       "dependencies": {
+            "@emotion/react": "^11.14.0",
+            "@emotion/styled": "^11.14.1",
+            "@mui/icons-material": "^7.3.5",
+            "@mui/material": "^7.3.5",
             "@radix-ui/react-accordion": "^1.2.3",
             "@radix-ui/react-alert-dialog": "^1.1.6",
             "@radix-ui/react-aspect-ratio": "^1.1.2",
@@ -42,6 +46,7 @@
             "react-dom": "^18.3.1",
             "react-flagkit": "^2.0.4",
             "react-hook-form": "^7.55.0",
+            "react-icons": "^5.5.0",
             "react-intersection-observer": "*",
             "react-resizable-panels": "^2.1.7",
             "recharts": "^2.15.2",

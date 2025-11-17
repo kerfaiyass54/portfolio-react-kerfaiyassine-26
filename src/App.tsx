@@ -8,6 +8,7 @@ import { Projects } from './components/Projects';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import {Languages} from "./components/Languages";
+import {Chat} from "./components/Chat"
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
         <Skills />
         <Projects />
         <Contact />
+          <Chat/>
         <Footer />
       </div>
     </LanguageProvider>
