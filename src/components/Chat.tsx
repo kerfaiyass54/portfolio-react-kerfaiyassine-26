@@ -1,12 +1,12 @@
 import React from 'react';
 import {useLanguage} from "../contexts/LanguageContext";
 import { SlArrowDown } from "react-icons/sl";
-import { SlControlPlay } from "react-icons/sl";
+
 
 
 
 export const Chat: React.FC = () => {
-    const { t, language } = useLanguage();
+
     return (
         <div className="container">
             <div className="chatbot-popup">

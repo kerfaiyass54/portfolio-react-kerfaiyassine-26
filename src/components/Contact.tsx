@@ -3,6 +3,8 @@ import { motion } from 'motion/react';
 import { useInView } from 'react-intersection-observer';
 import {FacebookIcon, Linkedin, Mail, MapPin, Phone, Send} from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import {Chat} from "./Chat"
+
 
 export const Contact: React.FC = () => {
   const { t, language } = useLanguage();
@@ -65,6 +67,14 @@ export const Contact: React.FC = () => {
               </div>
             </div>
           </motion.div>
+            <motion.form
+                initial={{ opacity: 0, x: 50 }}
+                animate={inView ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="space-y-6"
+            >
+                <Chat />
+            </motion.form>
         </div>
       </div>
     </section>

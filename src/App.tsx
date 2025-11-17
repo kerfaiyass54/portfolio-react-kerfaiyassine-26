@@ -21,7 +21,6 @@ export default function App() {
         <Skills />
         <Projects />
         <Contact />
-          <Chat/>
         <Footer />
       </div>
     </LanguageProvider>
