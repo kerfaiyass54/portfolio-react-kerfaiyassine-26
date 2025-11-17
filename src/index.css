@@ -2110,7 +2110,6 @@ body.dark {
     overflow: hidden;
     background-color: #fff;
     border-radius: 15px;
-    box-shadow: 0 0 128px 0 black, 0 32px 64px -48px black;
 }
 
 .chatbot-popup .chat-header{
@@ -2196,8 +2195,9 @@ body.dark {
 }
 
 .chat-body .bot-message .message-text {
-    background: #F6F2FF;
+    background: #0c0c42;
     border-radius: 13px 13px 13px 3px;
+    color: white;
 }
 
 .chat-body .user-message .message-text {
