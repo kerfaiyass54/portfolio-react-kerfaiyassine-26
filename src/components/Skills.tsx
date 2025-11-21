@@ -48,6 +48,8 @@ export const Skills: React.FC = () => {
       { name: 'AI Agents', level: 40, color: 'from-pink-500 to-purple-500', type: 'ai' },
       { name: 'Pandas', level: 70, color: 'from-green-600 to-green-700', type: 'ai' },
       { name: 'NumPy', level: 70, color: 'from-pink-500 to-orange-500', type: 'ai' },
+      {name: 'JUnit', level: 50, color: 'from-blue-500 to-indigo-500', type: 'others'},
+      {name: 'GitHub', level: 75, color: 'from-blue-500 to-indigo-500', type: 'devops'}
   ];
 
 
