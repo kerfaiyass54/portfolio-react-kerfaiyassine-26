@@ -1,9 +1,28 @@
-import React from 'react';
+import React, {useRef, useState} from 'react';
 
 
 
 
 export const Chat: React.FC = () => {
+
+    const [chatHistory, setChatHistory] = useState<{role: string, text: string}[]>([]);
+
+    const inputRef = useRef<HTMLInputElement>(null);
+
+    const generalBotResponse = (history) =>{
+        console.log(history);
+    }
+
+    const handleFormSubmit = (e) =>{
+        e.preventDefault();
+        const userMessage = inputRef.current.value.trim();
+        if(!userMessage) return;
+        inputRef.current.value = "";
+        setChatHistory((history) => [...history, {role: "user", text: userMessage}]);
+        setTimeout(() => setChatHistory((history) => [...history, {role : "model", text: "Thinking..."}]), 600);
+        generalBotResponse([...chatHistory, {role: "user", text: userMessage}]);
+    }
+
     return (
         <div className="container">
             <div className="chatbot-popup">
@@ -26,20 +45,29 @@ export const Chat: React.FC = () => {
                             Hey there! How can I help you?
                         </p>
                     </div>
-                    <div className="message user-message">
-                        <p className="message-text">
-                            hey
-                        </p>
-                    </div>
+                    {
+                        chatHistory.map((chat, index) => {
+                            return (
+                                <div key={index} className={`message ${chat.role === "model" ? "bot" : "user"}-message`}>
+
+                                    {chat.role === "model" && (
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 1024 1024">
+                                            <path d="M738.3 287.6H285.7c-59 0-106.8 47.8-106.8 106.8v303.1c0 59 47.8 106.8 106.8 106.8h81.5v111.1c0 .7.8 1.1 1.4.7l166.9-110.6 41.8-.8h117.4l43.6-.4c59 0 106.8-47.8 106.8-106.8V394.5c0-59-47.8-106.9-106.8-106.9z..." />
+                                        </svg>
+                                    )}
+
+                                    <p className="message-text">{chat.text}</p>
+                                </div>
+                            );
+                        })
+                    }
+
                 </div>
                 <div className="chat-footer">
-                    <form action="#" className="chat-form" onSubmit={""}>
-                        <input type="text" placeholder="Write your message here" className="message-input" required />
-                        <button><span class="material-symbols-outlined">
-arrow_upward_alt
-</span></button>
+                    <form className="chat-form" onSubmit={handleFormSubmit}>
+                        <input ref={inputRef} type="text" placeholder="Write your message here" className="message-input" required />
+                        <button><span className="material-symbols-outlined">arrow_upward_alt</span></button>
                     </form>
-
                 </div>
             </div>
         </div>

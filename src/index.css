@@ -2168,6 +2168,8 @@ body.dark {
     overflow-y: auto;
     padding: 25px 22px;
     margin-bottom: 82px;
+    scrollbar-width: thin;
+    scrollbar-color: white transparent;
 }
 
 .chat-body .message {

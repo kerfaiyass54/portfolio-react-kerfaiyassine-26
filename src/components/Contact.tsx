@@ -67,14 +67,14 @@ export const Contact: React.FC = () => {
               </div>
             </div>
           </motion.div>
-            <motion.form
+            <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 animate={inView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="space-y-6"
             >
                 <Chat />
-            </motion.form>
+            </motion.div>
         </div>
       </div>
     </section>
