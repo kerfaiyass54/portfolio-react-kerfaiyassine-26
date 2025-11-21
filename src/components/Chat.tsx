@@ -1,12 +1,9 @@
 import React from 'react';
-import {useLanguage} from "../contexts/LanguageContext";
-import { SlArrowDown } from "react-icons/sl";
 
 
 
 
 export const Chat: React.FC = () => {
-
     return (
         <div className="container">
             <div className="chatbot-popup">
@@ -36,7 +33,7 @@ export const Chat: React.FC = () => {
                     </div>
                 </div>
                 <div className="chat-footer">
-                    <form action="#" className="chat-form">
+                    <form action="#" className="chat-form" onSubmit={""}>
                         <input type="text" placeholder="Write your message here" className="message-input" required />
                         <button><span class="material-symbols-outlined">
 arrow_upward_alt
