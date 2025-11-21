@@ -58,10 +58,28 @@ interface Translations {
     message: string;
     send: string;
   };
+  language: {
+      title: string;
+      subtitle: string;
+      native: string;
+      arabic: string;
+      french: string;
+      german: string;
+      english: string;
+  }
 }
 
 const translations: Record<Language, Translations> = {
   en: {
+      language: {
+          title: 'My spoken languages',
+          subtitle: 'Here are the languages that I can speak',
+          native: 'Native',
+          arabic: 'Arabic',
+          french: 'French',
+          german: 'German',
+          english: 'English',
+      },
     nav: {
       about: 'About',
       skills: 'Skills',
@@ -120,6 +138,15 @@ const translations: Record<Language, Translations> = {
     },
   },
   ar: {
+      language: {
+          title: 'اللغات المتحدثة',
+          subtitle: 'هذه اللغات التي أتحدثها',
+          native: 'اللغة الأصلية',
+          arabic: 'العربية',
+          french: 'الفرنسية',
+          german: 'الألمانية',
+          english: 'الانقليزية',
+      },
     nav: {
       about: 'نبذة',
       skills: 'المهارات',
@@ -177,6 +204,15 @@ const translations: Record<Language, Translations> = {
     },
   },
   de: {
+      language: {
+          title: 'Meine Sprachen',
+          subtitle: 'Hier finden Sie die Sprache, die ich sprechen kann',
+          native: 'Native',
+          arabic: 'Arabisch',
+          french: 'Französisch',
+          german: 'Deutsch',
+          english: 'Englisch',
+      },
     nav: {
       about: 'Über',
       skills: 'Fähigkeiten',
@@ -234,6 +270,15 @@ const translations: Record<Language, Translations> = {
     },
   },
   fr: {
+      language: {
+          title: 'Mes langues',
+          subtitle: 'Ici vous trouvez les langues que je peux parler',
+          native: 'Native',
+          arabic: 'Arabe',
+          french: 'Français',
+          german: 'Allemand',
+          english: 'Anglais',
+      },
     nav: {
       about: 'À propos',
       skills: 'Compétences',

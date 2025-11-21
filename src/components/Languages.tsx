@@ -12,10 +12,10 @@ export const Languages: React.FC = ()=>{
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
     const stats = [
-        { code: 'SA', label: "Arabic", value: "Native" },
-        { code: 'US', label: "English", value: "B2" },
-        { code: 'FR', label: "French", value: "B2" },
-        { code: 'DE', label: "German", value: "B2" },
+        { code: 'SA', label: t.language.arabic, value: t.language.native },
+        { code: 'US', label: t.language.english, value: "B2" },
+        { code: 'FR', label: t.language.french, value: "B2" },
+        { code: 'DE', label: t.language.german, value: "B2" },
     ];
 
 
@@ -33,7 +33,7 @@ export const Languages: React.FC = ()=>{
                 className="text-center mb-12"
             >
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
-                    My spoken languages
+                    {t.language.title}
                 </h2>
             </motion.div>
             <div className="absolute inset-0 overflow-hidden">
@@ -77,7 +77,7 @@ export const Languages: React.FC = ()=>{
                         transition={{ duration: 0.5, delay: 0.4 }}
                         className="text-2xl sm:text-4xl text-gray-700 dark:text-gray-300 mb-6"
                     >
-                        Here are the languages that I can speak
+                        {t.language.subtitle}
                     </motion.h1>
                     <div className="grid md:grid-cols-4 gap-12 items-center">
                         <motion.div
