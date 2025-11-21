@@ -16,7 +16,6 @@ export const Hero: React.FC = () => {
       className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-blue-900/20"
       dir={language === 'ar' ? 'rtl' : 'ltr'}
     >
-      {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
           animate={{
@@ -88,7 +87,7 @@ export const Hero: React.FC = () => {
                 transition={{ duration: 0.5, delay: 0.4 }}
                 className="text-2xl sm:text-4xl text-gray-700 dark:text-gray-300 mb-6"
             >
-                Let's take a look to my portfolio
+                {t.hero.look}
             </motion.h2>
             <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -96,7 +95,7 @@ export const Hero: React.FC = () => {
                 transition={{ duration: 0.5, delay: 0.6 }}
                 className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-8"
             >
-                Click on that row below or use the navigation
+                {t.hero.row}
             </motion.p>
 
         </div>
