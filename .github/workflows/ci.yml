@@ -1,0 +1,34 @@
+name: CI - React proftolio
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-analyze:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install SonarQube Scanner
+        run: npm install -g sonar-scanner
+
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        with:
+          organization: kerfaiyass54
+          projectKey: kerfaiyass54_portfolio_react
+          projectName: React Portfolio
+          token: a4a186c2c2865a1c44ce91ec74f1cb9fdb7b3db2
