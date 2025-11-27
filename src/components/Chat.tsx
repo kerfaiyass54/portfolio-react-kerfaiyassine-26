@@ -9,8 +9,55 @@ export const Chat: React.FC = () => {
 
     const inputRef = useRef<HTMLInputElement>(null);
 
+
+
+
+
     const generalBotResponse = async (history) => {
-        const formattedHistory = history.map(({ role, text }) => ({ role, parts: [{ text }] }));
+
+
+        const portfolioData = {
+            name: "Yassine Kerfai",
+            skills: ["Angular", "Spring Boot", "Java", "Keycloak", "SQL", "DevOps","AI agents"],
+            education: [
+                { degree: "Engineering in Computer Science", school: "ENIT", year: 2024 },
+                { degree: "Preparatory scientific cycle", school: "IPEIEM", year: 2021 },
+                { degree: "Baccalaureate", school: "Aouina high school", year: 2019 }
+            ],
+            projects: [
+                { title: "Portfolio Website", description: "Built with Angular, showcases my projects and skills" },
+                { title: "Car Rental App", description: "Spring Boot + Angular, Keycloak authentication, postgresql" },
+                { title: "Football application", description: "Spring Boot + Angular, Keycloak authentication + microservices, used tools: docker-compose, kafka, springboot,angular,mongdb" },
+            ],
+            languages: ["English B2", "French B2", "German B2", "Arabic native"],
+        };
+
+        const systemMessage = {
+            role: "model",
+            parts: [
+                {
+                    text: `You are a personal assistant chatbot for the portfolio website of ${portfolioData.name}.
+Here is the information about him:
+
+Name: ${portfolioData.name}
+Skills: ${portfolioData.skills.join(", ")}
+Education: ${portfolioData.education.map(e => `${e.degree} at ${e.school} (${e.year})`).join(" | ")}
+Projects: ${portfolioData.projects.map(p => `${p.title}: ${p.description}`).join(" | ")}
+Languages: ${portfolioData.languages.join(", ")}
+
+When the user asks about him, you MUST answer using the above data.`
+                }
+            ]
+        };
+
+        const formattedHistory = [
+            systemMessage,
+            ...history.map(({ role, text }) => ({ role, parts: [{ text }] }))
+        ];
+
+
+
+
 
         const updateHistory = (text: string) => {
             setChatHistory(prev => [...prev.filter(msg => msg.text !== "Thinking..."), { role: "model", text }]);
