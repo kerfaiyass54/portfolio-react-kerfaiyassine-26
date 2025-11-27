@@ -31,8 +31,24 @@ This project is created using only a frontEnd stack which contains all those tec
    ```bash
      cd blog-project
      npm install
-3. Run the application
+3. Create a file called .env and copy this to the file
+   ```bash
+     VITE_API_URL=<your-own-api-key>
+4. Run the application
    ```bash
      npm run dev
+
+## Generative Language API
+1. Create a Google Cloud Project
+   - Go to Google Cloud Console
+   - Click “Select a project” → “New Project”.
+2. Enable the Generative Language API
+   - In your project dashboard, go to APIs & Services → Library.
+   - Search for “Generative Language API”.
+   - Click Enable.
+3. Create an API Key
+   - Go to APIs & Services → Credentials.
+   - Click “Create Credentials” → “API Key”.
+   - Copy the generated key
 
 
