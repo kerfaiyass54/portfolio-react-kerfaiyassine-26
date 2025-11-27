@@ -29,6 +29,6 @@ jobs:
         uses: SonarSource/sonarcloud-github-action@master
         with:
           organization: kerfaiyass54
-          projectKey: kerfaiyass54_portfolio_react
+          projectKey: kerfaiyass54_portfolio-react-kerfaiyassine-26
           projectName: React Portfolio
           token: a4a186c2c2865a1c44ce91ec74f1cb9fdb7b3db2
