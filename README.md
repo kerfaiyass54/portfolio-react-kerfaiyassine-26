@@ -1,5 +1,8 @@
 # portfolio-react-kerfaiyassine-26
 
+[![My Skills](https://skillicons.dev/icons?i=py,docker,react,bootstrap,css,git,github,html,idea,npm,githubactions,ts,vscode)](https://skillicons.dev)
+
+
 ## 🚀 Overview
 This project is a responsive animated portfolio built using React and TypeScript. It showcases my personal information, education, skills, and projects. The portfolio includes interactive elements like a chatbot and animations to enhance user experience.
 
@@ -52,44 +55,6 @@ VITE_API_URL=<your-own-api-key>
 npm run dev
 ```
 
-### Alternative Installation Methods
-- **Using Docker:**
-  ```bash
-  docker run -p 3000:3000 kerfaiyass54/portfolio-react-kerfaiyassine-26
-  ```
-
-## 📁 Project Structure
-```
-portfolio-react-kerfaiyassine-26/
-├── public/
-│   ├── index.html
-│   └── ...
-├── src/
-│   ├── components/
-│   │   ├── Home.tsx
-│   │   ├── About.tsx
-│   │   ├── Projects.tsx
-│   │   ├── Contact.tsx
-│   │   └── ...
-│   ├── pages/
-│   │   ├── _app.tsx
-│   │   ├── index.tsx
-│   │   └── ...
-│   ├── styles/
-│   │   ├── global.css
-│   │   └── ...
-│   ├── utils/
-│   │   ├── api.ts
-│   │   └── ...
-│   ├── App.tsx
-│   ├── index.tsx
-│   └── ...
-├── .env
-├── .gitignore
-├── package.json
-├── README.md
-└── ...
-```
 
 ## 🔧 Configuration
 - **Environment Variables:**
